@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+   #fotos {
+      width: 100%;
+      height: 300px;
+   }
+   #fotos tr, td {
+      width: 100%;
+      height: 300px;
+   }
+   #fotos img {
+      position: relative;
+      height: 300px;
+   }
+</style>
+<script>
+$(document).ready(function(){
+      
+	var fotos = [
+	"img/foto2.jpg",
+	"img/foto1.jpg",
+	"img/foto4.jpg",
+	"img/foto5.jpg",
+	"img/foto7.jpg",
+	"img/foto6.jpg",
+	"img/foto8.jpg",
+	"img/foto3.jpg",
+	"img/foto9.jpg"
+    ];
+
+	fotos.forEach(function(i){
+		$("#fotos tr").append('<td><img src="'+i+'"></td>');
+	});	
+	var slide = function(){
+		var tableWidth = $("#fotos tr").width();
+		var finalFoto = tableWidth - ($("#fotos img").width()*3);
+		var left = $('#fotos img').css("left");
+		left = left.slice(0, left.length-2);
+		if(Math.abs(left) === finalFoto){
+			$("#fotos img").animate({left: '0px'}, 10000);
+		}
+		else {
+			$("#fotos img").animate({left: '-'+finalFoto+'px'}, 10000);
+		}
+	};
+	slide();
+	window.setInterval(slide, 11000);
+});
+	
+</script>
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<div style="overflow-x:hidden;">
+   <table id="fotos">
+      <tr>
+      </tr>
+   </table>
+</div>
+
+</body>
+</html>
