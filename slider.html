@@ -4,21 +4,25 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <style>
    #fotos {
-      width: 100%;
-      height: 300px;
+     width: 100%;
+     height: 310px;
+     overflow-x: hidden;
    }
-   #fotos tr, td {
-      width: 100%;
-      height: 300px;
+   #container {
+     width: auto;
+     height: 300px;
+     box-sizing: border-box;
    }
-   #fotos img {
-      position: relative;
-      height: 300px;
+   img {
+     /*float: left;*/
+     position: absolute;
+     height: inherit;
+     box-sizing: border-box;
    }
 </style>
 <script>
 $(document).ready(function(){
-      
+  var container = $("#container"), containerWidth = 0;
 	var fotos = [
 	"img/foto2.jpg",
 	"img/foto1.jpg",
@@ -30,37 +34,46 @@ $(document).ready(function(){
 	"img/foto3.jpg",
 	"img/foto9.jpg"
     ];
+//Aca llenamos las imagenes
+	fotos.forEach(function(i,k){
+		container.append('<img src="'+i+'">');
+    container[0].childNodes[k].onload = function() {
+      this.style.left = containerWidth+"px";
+      containerWidth += this.width;
+/*      if(fotos.length === container[0].childNodes.length){
+        container.width(containerWidth);
+      }*/
+    };
+  	});
 
-	fotos.forEach(function(i){
-		$("#fotos tr").append('<td><img src="'+i+'"></td>');
-	});	
-	var slide = function(){
-		var tableWidth = $("#fotos tr").width();
-		var finalFoto = tableWidth - ($("#fotos img").width()*3);
-		var left = $('#fotos img').css("left");
-		left = left.slice(0, left.length-2);
-		if(Math.abs(left) === finalFoto){
-			$("#fotos img").animate({left: '0px'}, 10000);
-		}
-		else {
-			$("#fotos img").animate({left: '-'+finalFoto+'px'}, 10000);
-		}
-	};
-	slide();
-	window.setInterval(slide, 11000);
+//Esta funcion evalua si una imagen esta fuera de la pantalla para luego colocarla al final
+//exactamente al lado de la ultima
+  function repeat(){
+    var left = this.style.left.slice(0, this.style.left.length-2);
+    if(left <= -500){
+      var lastImage = $("#container img").last();
+      var left = parseInt(lastImage.css("left")) + lastImage.width();
+      this.style.left = left + "px";
+      $(this).detach();
+      $("#container").append(this);
+    }
+  }
+//esta funcion mueve las imagenes a la izquierda
+  var slide = function(){
+    //var endOfSlider = containerWidth - window.innerWidth;
+    $("img").animate({left:"-=100px"}, 2000, "linear", repeat);
+  }
+
+	window.setInterval(slide, 2000);
 });
-	
+
 </script>
 </head>
 <body>
 
-<button>Start Animation</button>
-
-<div style="overflow-x:hidden;">
-   <table id="fotos">
-      <tr>
-      </tr>
-   </table>
+<button id="move">Start Animation</button>
+<div id="fotos">
+  <div id="container"></div>
 </div>
 
 </body>
