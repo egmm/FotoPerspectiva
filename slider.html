@@ -38,8 +38,8 @@ $(document).ready(function(){
 	fotos.forEach(function(i,k){
 		container.append('<img src="'+i+'">');
     container[0].childNodes[k].onload = function() {
-      this.style.left = containerWidth+"px";
-      containerWidth += this.width;
+      $(this).css("left", containerWidth);
+      containerWidth += $(this).width();
 /*      if(fotos.length === container[0].childNodes.length){
         container.width(containerWidth);
       }*/
