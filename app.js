@@ -1,6 +1,5 @@
 $(document).ready(function() {
-	var tableWidth;
-	var rellenarTabla = function(){
+var container = $("#container"), containerWidth = 0;
 		var fotos = [
 			"img/foto2.jpg",
 			"img/foto1.jpg",
@@ -12,15 +11,31 @@ $(document).ready(function() {
 			"img/foto5.jpg",
 			"img/foto9.jpg"
 		];
-		fotos.forEach(function(i){
-			$("#fotos tr").append('<td><img src="'+i+'"></td>');
-		});
-		//window.setInterval(slide, 30000);
-	}
-	var slide = function(){
-			$("#fotos img").animate({left: '-4000px'}, 70000, 'linear').animate({left: '0px'}, 70000, 'linear');
-	};
-	rellenarTabla();
-	slide();
-	window.setInterval(slide, 140000);
+		//Aca llenamos las imagenes
+			fotos.forEach(function(i,k){
+				container.append('<img src="'+i+'">');
+		    container[0].childNodes[k].onload = function() {
+		      $(this).css("left", containerWidth);
+		      containerWidth += $(this).width();
+		    };
+		  	});
+
+		//Esta funcion evalua si una imagen esta fuera de la pantalla para luego colocarla al final
+		//exactamente al lado de la ultima
+		  function repeat(){
+		    var left = this.style.left.slice(0, this.style.left.length-2);
+		    if(left <= -550){
+		      var lastImage = $("#container img").last();
+		      var left = parseInt(lastImage.css("left")) + lastImage.width();
+		      this.style.left = left + "px";
+		      $(this).detach();
+		      $("#container").append(this);
+		    }
+		  }
+		//esta funcion mueve las imagenes a la izquierda
+		  var slide = function(){
+		    $("#container img").animate({left:"-=100px"}, 2000, "linear", repeat);
+		  }
+
+			window.setInterval(slide, 2000);
 });
