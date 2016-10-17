@@ -2,7 +2,9 @@ body {
 	background-color: #000000;
 }
 p, h1, a {
-	color: #a6a6a6;
+	color: #4C3E2D;
+	font-family: 'Proza Libre', sans-serif;
+	font-weight: bold;
 }
 #logo {
 	height: 170px;
@@ -14,12 +16,10 @@ p, h1, a {
 .nav li a:hover {
 	background-color: inherit;
 }
-main {
-	height: 400px;
-}
 #fotos {
+	position: relative;
 	width: 100%;
-	height: inherit;x;
+	height: 400px;
 	overflow-x: hidden;
 }
 #container {
@@ -44,11 +44,11 @@ main {
 	margin-bottom: 20px;
 }
 nav {
-	/*background: linear-gradient(to right, transparent,#6a6a6a,transparent);*/
-	background: linear-gradient(to right, transparent,rgba(166,166,166,0.3), rgba(166,166,166,0.5),#6a6a6a,rgba(166,166,166,0.5), rgba(166,166,166,0.3), transparent);
-    padding: 2px;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+	/*background: linear-gradient(to right, transparent,rgba(166,166,166,0.3), rgba(166,166,166,0.5),#6a6a6a,rgba(166,166,166,0.5), rgba(166,166,166,0.3), transparent);*/
+	background: linear-gradient(to right, transparent,rgba(76,62,45,0.3), rgba(76,62,45,0.5),#4C3E2D,rgba(76,62,45,0.5), rgba(76,62,45,0.3), transparent);
+  padding: 2px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 	margin-bottom: 10px;
 }
 nav ul {
@@ -60,7 +60,7 @@ nav ul li a {
 }
 footer p {
 	font-size: 10px;
-	color: #a6a6a6;
+	color: #4C3E2D;
 	padding-top: 15px;
 	display: inline;
 	float: right;

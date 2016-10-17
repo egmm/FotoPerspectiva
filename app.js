@@ -1,15 +1,14 @@
 $(document).ready(function() {
 var container = $("#container"), containerWidth = 0;
 		var fotos = [
-			"img/foto2.jpg",
-			"img/foto1.jpg",
-			"img/foto4.jpg",
-			"img/foto3.jpg",
-			"img/foto7.jpg",
-			"img/foto6.jpg",
-			"img/foto8.jpg",
-			"img/foto5.jpg",
-			"img/foto9.jpg"
+			"img/gaby1.jpg",
+			"img/erika1.jpg",
+			"img/gaby2.jpg",
+			"img/gaby5.jpg",
+			"img/gaby3.jpg",
+			"img/erika3.jpg",
+			"img/erika2.jpg",
+			"img/gaby4.jpg"
 		];
 		//Aca llenamos las imagenes
 			fotos.forEach(function(i,k){
