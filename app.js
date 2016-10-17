@@ -1,24 +1,26 @@
 $(document).ready(function() {
 var container = $("#container"), containerWidth = 0;
 		var fotos = [
-			"img/gaby1.jpg",
-			"img/erika1.jpg",
+			"img/erika2.jpg",
 			"img/gaby2.jpg",
 			"img/gaby5.jpg",
+			"img/erika1.jpg",
+			"img/foto3.jpg",
 			"img/gaby3.jpg",
-			"img/erika3.jpg",
 			"img/erika2.jpg",
-			"img/gaby4.jpg"
+			"img/gaby1.jpg"
 		];
-		//Aca llenamos las imagenes
+		//Aca colocamos las imagenes
 			fotos.forEach(function(i,k){
 				container.append('<img src="'+i+'">');
-		    container[0].childNodes[k].onload = function() {
-		      $(this).css("left", containerWidth);
-		      containerWidth += $(this).width();
-		    };
-		  	});
-
+			});
+			//Aca se posicionan una al lado de la otra
+			$(window).load(function(){
+				$("#container img").each(function(){
+					$(this).css("left", containerWidth);
+					containerWidth += $(this).width();
+				});
+			});
 		//Esta funcion evalua si una imagen esta fuera de la pantalla para luego colocarla al final
 		//exactamente al lado de la ultima
 		  function repeat(){
