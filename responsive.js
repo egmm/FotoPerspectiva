@@ -21,6 +21,9 @@ $(document).ready(function(){
 	$("#btn-menu").click(function(){
 		$("#bar").toggleClass("open");
 	});
+	$("#fotos").click(function(){
+		$("#bar").removeClass("open");
+	});
 
 		responsive();
 });
