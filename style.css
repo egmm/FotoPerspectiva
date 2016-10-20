@@ -131,6 +131,9 @@ i:last-child {
 	}
 }
 @media screen and (max-width: 350px){
+	#fotos {
+		height: 400px;
+	}
 	#logo {
 		height: 43px;
 		display: inline;
