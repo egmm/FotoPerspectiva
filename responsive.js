@@ -1,7 +1,6 @@
-(function(){
-
+$(document).ready(function(){
+	var windowSize = $(window).width();
 	var responsive = function(){
-		var windowSize = $(window).width();
 		if(windowSize < 500){
 			//console.log(windowSize);
 			$("#bar").removeClass('container');
@@ -18,14 +17,10 @@
 		}
 	};
 
-	var windowSize = $(window).width();
-	responsive();
 
 	$("#btn-menu").click(function(){
-		$("#bar").addClass("open");
-	});
-	$("main").click(function(){
-		$("#bar").removeClass("open");
+		$("#bar").toggleClass("open");
 	});
 
-})();
+		responsive();
+});

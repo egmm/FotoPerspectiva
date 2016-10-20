@@ -85,14 +85,30 @@ i:last-child {
 //Responsive
 */
 @media screen and (max-width: 500px){
-	header h1 {
-		display: inline-block;
-		margin-left: 25%;
+
+	@media screen and (max-width: 350px){
+		#logo {
+			height: 45px;
+			display: inline;
+			margin-left: 12px;
+		}
+		header i {
+			font-size: 1.5em !important;
+		}
+	}
+	#logo {
+		height: 50px;
+		display: inline;
+		margin-left: 12px;
+	}
+	header {
+		margin-bottom: 10px;
+		padding-top: 8px;
 	}
 	header i {
 		display: inline-block;
 		margin-left: 5%;
-		font-size: 2.4em;
+		font-size: 1.8em !important;
 		color: #c4823b;
 	}
 	#bar {
@@ -112,13 +128,14 @@ i:last-child {
 	}
 	.social a:first-child {
 		margin-left: 45%;
+		margin-right: 5px;
 	}
 	.social {
 		margin-top: 10px;
 	}
 	footer p {
 		display: block;
-		font-size: 8px;
+		font-size: 6px;
 		margin: 0;
 		padding-top: 5px;
 		text-align: center;
