@@ -3,8 +3,8 @@ body {
 	height: 100%;
 }
 p, h1, a {
-	color: #c4823b;
-	font-family: 'Proza Libre', sans-serif;
+	color: #9b744a;
+	font-family: "book antigua", sans-serif;
 	font-weight: bold;
 }
 #logo {
@@ -12,11 +12,13 @@ p, h1, a {
 	max-width: 100%;
 	display: block;
 	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	box-sizing: border-box;
 }
 .nav li a:hover, footer a:hover {
 	background-color: inherit;
-	color: #c4823b;
+	color: #9b744a;
 	-webkit-transform: scale(1.2);
 }
 #fotos {
@@ -40,9 +42,6 @@ p, h1, a {
 	transition: transform 0.3s ease !important;
 }
 @media screen and (min-width: 800px){
-	header{
-	/*height: 110px;*/
-}
 .head{
 	margin-bottom: 20px;
 }
@@ -61,11 +60,11 @@ nav ul li a {
 	margin-top: -5px;
 }
 footer {
-	margin-top: 15px;
+	margin-top: 5px;
 }
 footer p {
 	font-size: 10px;
-	color: #c4823b;
+	color: #9b744a;
 	padding-top: 15px;
 	display: inline;
 	float: right;
@@ -98,7 +97,7 @@ i:last-child {
 		display: inline-block;
 		margin-left: 5%;
 		font-size: 1.8em !important;
-		color: #c4823b;
+		color: #9b744a;
 	}
 	#bar {
 		height: 500px;
@@ -143,6 +142,6 @@ i:last-child {
 		display: inline-block;
 		margin-left: 8%;
 		font-size: 1.5em !important;
-		color: #c4823b;
+		color: #9b744a;
 	}
 }
