@@ -7,15 +7,6 @@ p, h1, a {
 	font-family: "book antigua", sans-serif;
 	font-weight: bold;
 }
-#logo {
-	height: 140px;
-	max-width: 100%;
-	display: block;
-	margin: auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	box-sizing: border-box;
-}
 .nav li a:hover, footer a:hover {
 	background-color: inherit;
 	color: #9b744a;
@@ -42,6 +33,15 @@ p, h1, a {
 	transition: transform 0.3s ease !important;
 }
 @media screen and (min-width: 800px){
+#logo {
+		height: 140px;
+		max-width: 100%;
+		display: block;
+		margin: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		box-sizing: border-box;
+	}
 .head{
 	margin-bottom: 20px;
 }
