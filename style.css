@@ -99,6 +99,9 @@ i:last-child {
 		font-size: 1.8em !important;
 		color: #9b744a;
 	}
+	#btn-menu {
+		display: inline-block !important;
+	}
 	#bar {
 		height: 500px;
 		width: 50%;
@@ -114,8 +117,11 @@ i:last-child {
 		padding: 10px;
 		text-align: center;
 	}
+	#fotos {
+		height: 400px;
+	}
 	.social a:first-child {
-		margin-left: 45%;
+		margin-left: 43%;
 		margin-right: 5px;
 	}
 	.social {
@@ -137,6 +143,11 @@ i:last-child {
 		height: 43px;
 		display: inline;
 		margin-left: 12px;
+	}
+	header {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin: 0;
 	}
 	header i {
 		display: inline-block;

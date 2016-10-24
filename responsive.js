@@ -1,8 +1,8 @@
 $(document).ready(function(){
-	var windowSize = $(window).width();
+	var windowSize;
 	var responsive = function(){
+		windowSize = $(window).width();
 		if(windowSize < 500){
-			//console.log(windowSize);
 			$("#bar").removeClass('container');
 			$('#bar ul').removeClass('nav-justified').addClass('nav-stacked');
 		}
@@ -25,5 +25,5 @@ $(document).ready(function(){
 		$("#bar").removeClass("open");
 	});
 
-		responsive();
+	$(window).resize(responsive);
 });
