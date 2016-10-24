@@ -25,7 +25,7 @@ var container = $("#container"), containerWidth = 0;
 		//exactamente al lado de la ultima
 		  function repeat(){
 		    var left = this.style.left.slice(0, this.style.left.length-2);
-		    if(left <= -550){
+		    if(left <= -600){
 		      var lastImage = $("#container img").last();
 		      var left = parseInt(lastImage.css("left")) + lastImage.width();
 		      this.style.left = left + "px";
@@ -35,8 +35,8 @@ var container = $("#container"), containerWidth = 0;
 		  }
 		//esta funcion mueve las imagenes a la izquierda
 		  var slide = function(){
-		    $("#container img").animate({left:"-=100px"}, 2000, "linear", repeat);
+		    $("#container img").animate({left:"-=100px"}, 2500, "linear", repeat);
 		  }
 
-			window.setInterval(slide, 2000);
+			window.setInterval(slide, 2500);
 });

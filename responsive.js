@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var windowSize;
+	var windowSize = $(window).width();
 	var responsive = function(){
 		windowSize = $(window).width();
 		if(windowSize < 500){
@@ -7,12 +7,15 @@ $(document).ready(function(){
 			$('#bar ul').removeClass('nav-justified').addClass('nav-stacked');
 		}
 		else {
-			$("#btn-menu").css("display", "none");
 			if(!$("#bar ul").hasClass("nav-justified")){
 				$("#bar ul").addClass("nav-justified");
 			}
-			if(!$("#bar ul").hasClass("container")){
-				$("#bar ul").addClass("container")
+			if(!$("#bar").hasClass("container")){
+				$("#bar").addClass("container");
+			}
+			else if(windowSize <= 767){
+				$("#bar").removeClass("container");
+				$('#bar ul').removeClass('nav-justified');
 			}
 		}
 	};
@@ -25,5 +28,6 @@ $(document).ready(function(){
 		$("#bar").removeClass("open");
 	});
 
+	$(window).load(responsive);
 	$(window).resize(responsive);
 });

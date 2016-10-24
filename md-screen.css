@@ -1,0 +1,58 @@
+header {
+  padding: 20px;
+}
+#logo {
+  max-width: 100%;
+}
+nav {
+	background: linear-gradient(to right, transparent,rgba(208, 156, 99,0.3), rgba(208, 156, 99,0.5),#d09c63,rgba(208, 156, 99,0.5), rgba(208, 156, 99,0.3), transparent);
+  padding: 2px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+	margin-bottom: 25px;
+}
+nav ul {
+	background-color: black;
+}
+#fotos {
+  height: 550px;
+}
+footer {
+  padding: 5%;
+}
+footer div {
+  padding: 2%;
+}
+footer a {
+  margin-left: 43%;
+}
+footer a:last-child {
+  margin-left: 5px;
+}
+footer p {
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 767px){
+  nav ul {
+  	padding-left: 100px !important;
+    padding-right: 100px;
+  }
+  nav ul li {
+    margin-left: 15% !important;
+  }
+  nav ul li:first-child {
+    margin-left: 0px !important;
+  }
+}
+@media screen and (max-width: 599px){
+  nav ul {
+  	padding-left: 50px !important;
+    padding-right: 50px;
+  }
+  nav ul li {
+    margin-left: 15% !important;
+  }
+  nav ul li:first-child {
+    margin-left: 0px !important;
+  }
+}
