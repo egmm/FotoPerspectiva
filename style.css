@@ -47,6 +47,13 @@ p, h2, a {
 	height: inherit;
 	box-sizing: border-box;
 }
+.thumbnail {
+	padding: 0px;
+	border-color: #000;
+}
+.thumbnail:hover {
+	border-color: #9b744a !important;
+}
 .open {
 	transform: translate(0, 0) !important;
 	transition: transform 0.3s ease !important;
