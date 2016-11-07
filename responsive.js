@@ -45,7 +45,7 @@ $(document).ready(function(){
 	$("#btn-menu").click(function(){
 		$("#bar").toggleClass("open");
 	});
-	$("#fotos").click(function(){
+	$("#fotos, #bar li").click(function(){
 		$("#bar").removeClass("open");
 	});
 	/*
@@ -64,6 +64,10 @@ $(document).ready(function(){
 		if(this.textContent === "GALERÍA"){
 			if($("#galeria").length){
 			} else {
+				if($("#contacto").length || $("#info").length){
+					$("#contacto").remove();
+					$("#info").remove();
+				}
 				loadGalery();
 			}
 		} else if(this.textContent === "INFO"){
@@ -74,6 +78,10 @@ $(document).ready(function(){
 		} else if(this.textContent === "CONTACTO"){
 			if($("#contacto").length){
 			} else {
+				if($("#galeria").length || $("#info").length){
+					$("#galeria").remove();
+					$("#info").remove();
+				}
 				loadContact();
 			}
 		}
