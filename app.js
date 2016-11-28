@@ -1,14 +1,15 @@
 $(document).ready(function() {
 var container = $("#container"), containerWidth = 0;
 		var fotos = [
-			"img/erika2.jpg",
-			"img/gaby2.jpg",
-			"img/gaby5.jpg",
-			"img/erika1.jpg",
-			"img/foto3.jpg",
-			"img/gaby3.jpg",
-			"img/erika2.jpg",
-			"img/gaby1.jpg"
+			"img/Blanco y negro/Portada.jpg",
+			"img/Photoshoot/Gaby.jpg",
+			"img/Photoshoot/Carlos.jpg",
+			"img/Photoshoot/Ber.jpg",
+			"img/Retratos/Boy.jpg",
+			"img/Photoshoot/Erika.jpg",
+			"img/Retratos/Carlos.jpg",
+			"img/Retratos/Mama.jpg",
+			"img/Retratos/Gaby.jpg"
 		];
 		//Aca colocamos las imagenes
 			fotos.forEach(function(i,k){

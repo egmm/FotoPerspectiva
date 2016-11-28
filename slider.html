@@ -18,22 +18,19 @@
 </style>
 <script>
 $(document).ready(function(){
-      
+
 	var fotos = [
-	"img/foto2.jpg",
-	"img/foto1.jpg",
-	"img/foto4.jpg",
-	"img/foto5.jpg",
-	"img/foto7.jpg",
-	"img/foto6.jpg",
-	"img/foto8.jpg",
-	"img/foto3.jpg",
-	"img/foto9.jpg"
+	"img/Blanco y Negro/BN-Jubilee Street",
+  "img/Documental/Carrera NIKE/Portada",
+  "img/Documental/Plenilunio Santa Cruz de Tenerife/Portada",
+  "img/Documental/Sabana Grande/Portada",
+  "img/Photoshoot/Portada",
+  "img/Retratos/Portada"
     ];
 
 	fotos.forEach(function(i){
 		$("#fotos tr").append('<td><img src="'+i+'"></td>');
-	});	
+	});
 	var slide = function(){
 		var tableWidth = $("#fotos tr").width();
 		var finalFoto = tableWidth - ($("#fotos img").width()*3);
@@ -49,7 +46,7 @@ $(document).ready(function(){
 	slide();
 	window.setInterval(slide, 11000);
 });
-	
+
 </script>
 </head>
 <body>
